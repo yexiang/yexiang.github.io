@@ -1,3 +1,3 @@
-body { margin: .5em; font-size: 3em; }
-p {text-align: justify;text-justify:distribute;text-indent: 0em; line-height:1.65555em; }
-p:first-child { font-weight: 999; text-indent: 0; color: magenta;}
+body { margin: 1rem; font-size: 3.5rem; }
+p {text-align: justify;text-justify:distribute;text-indent: 0em; line-height:1.5555rem; }
+p:first-child { font-weight: 999; text-indent: 0em; color: magenta;}
