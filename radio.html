@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Radio</title>
+	<meta name="theme-color" content="#222">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=8.0, user-scalable=no" name="viewport">
+	<meta name="no_referrer">
+	<meta name="referrer" content="no-referrer">
+<style type="text/css" media="all">
+body{background-color:#bbb;color:#000;margin: 0;padding: 0;}
+a{text-decoration: none;color:#333;}
+a:hover {color:#f60;}
+body,td {font:16px "Geneva","", "Arial", "Helvetica",sans-serif;}
+ul,li {margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4,h5,h6 {margin:0;padding:0;}
+h1 {padding:5px;font:16px bold "Geneva","", "Arial", "Helvetica",sans-serif;}
+h1 small {font-size:11px;font-weight:normal;}
+.tree_out {max-width:100%;margin-top:30px;}
+.tree_tit {margin: .51em 0;}
+.link,
+.tree_1 .tree_tit a,
+.tree_1 .tree_tit a:visited,
+.tree_2 .tree_tit a,
+.tree_2 .tree_tit a:visited {margin-left:10px;padding-left:0px;font-size:18px;display:block;}
+.tree_2 .tree_tit h3.Lst a {line-height:250%;background: #FF0000;}
+.tree_2 .tree_txt {display:none;}
+.tree_1 .tree_txt ul li {padding-left:35px;line-height:150%;}
+.link{font-size: 13px;}
+#container{
+}
+#header, #player {
+background-color:#000;
+}
+#header {
+height: 120px;
+width: 100%;
+}
+#header p{
+color:#ff0;
+margin: 5px 0;
+}
+#player {
+position: fixed;
+padding: 5px;
+width: 100%;
+}
+#tr1 span{font-size: 13px; color:#555;}
+audio {
+    background-color: #fff;
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 320px;
+    height: 35px;
+}
+</style>
+<script type="text/javascript">
+    <!--
+    function ExChgClsName(Obj,NameA,NameB){
+        var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+        Obj.className=Obj.className==NameA?NameB:NameA;
+    }
+    function showmenu_tree(iNo){
+        ExChgClsName("tree_id__"+iNo,"tree_1","tree_2");
+    }
+    -->
+</script>
+
+</head>
+<body>
+
+<div id="container">
+<div id="header">
+<div id="player">
+<p id="tr1"></p>
+<audio width="380" height="60" id="audio" controls></audio>
+</div>
+</div>
+<div class="tree_out">
+<div class="tree_2" id="tree_id__0">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(0);">安徽省 10</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://192.168.1.101/hls/stream.m3u8',this.innerHTML)">1. 合肥巢湖之声广播</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/chzspl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/gsgbpl/playlist.m3u8',this.innerHTML)">2. 合肥故事广播 FM98.8</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/gsgbpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/hsgbpl/playlist.m3u8',this.innerHTML)">3. 合肥徽商广播 FM100.3</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/hsgbpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/jtgbpl/playlist.m3u8',this.innerHTML)">4. 合肥交通广播 FM102.6</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/jtgbpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/xczxpl/playlist.m3u8',this.innerHTML)">5. 合肥新城资讯广播</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/xczxpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/xwzhpl/playlist.m3u8',this.innerHTML)">6. 合肥新闻广播 FM91.5</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/xwzhpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s1.hfbtv.com/hfbtv/qcyypl/playlist.m3u8',this.innerHTML)">7. 合肥音乐广播 Music FM87.6</a>
+<a href="vlc://http://s1.hfbtv.com/hfbtv/qcyypl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live.ahsz.tv/audio/s10001-jtgb/index.m3u8',this.innerHTML)">8. 宿州交通广播</a>
+<a href="vlc://http://live.ahsz.tv/audio/s10001-jtgb/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live.ahsz.tv/audio/s10001-wygb/index.m3u8',this.innerHTML)">9. 宿州文艺广播</a>
+<a href="vlc://http://live.ahsz.tv/audio/s10001-wygb/index.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live.ahsz.tv/audio/s10001-xwgb/index.m3u8',this.innerHTML)">10. 宿州新闻综合广播</a>
+<a href="vlc://http://live.ahsz.tv/audio/s10001-xwgb/index.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__1">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(1);">北京市 16</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm1043/96K/tzwj_video.m3u8',this.innerHTML)">1. 北京长书广播 FM104.3</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm1043/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm1073/96K/tzwj_video.m3u8',this.innerHTML)">2. 北京城市广播 FM107.3</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm1073/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm945/96K/tzwj_video.m3u8',this.innerHTML)">3. 北京动听调频 Metro Radio FM94.5</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm945/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm986/96K/tzwj_video.m3u8',this.innerHTML)">4. 北京古典音乐广播 FM98.6</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm986/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/am603/96K/tzwj_video.m3u8',this.innerHTML)">5. 北京故事广播 AM603</a>
+<a href="vlc://http://123.56.16.201:1935/live/am603/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm1075/96K/tzwj_video.m3u8',this.innerHTML)">6. 北京怀旧金曲 FM107.5</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm1075/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm1065/96K/tzwj_video.m3u8',this.innerHTML)">7. 北京欢乐时光 FM106.5</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm1065/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm1039/96K/tzwj_video.m3u8',this.innerHTML)">8. 北京交通广播 FM103.9</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm1039/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm994/96K/tzwj_video.m3u8',this.innerHTML)">9. 北京教学广播 FM99.4</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm994/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/am927/96K/tzwj_video.m3u8',this.innerHTML)">10. 北京青年广播 FM98.2</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/am927/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/fm1025/96K/tzwj_video.m3u8',this.innerHTML)">11. 北京体育广播 FM102.5</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/fm1025/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://audiolive.rbc.cn:1935/live/am774/96K/tzwj_video.m3u8',this.innerHTML)">12. 北京外语广播 AM774</a>
+<a href="vlc://http://audiolive.rbc.cn:1935/live/am774/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm876/96K/tzwj_video.m3u8',this.innerHTML)">13. 北京文艺广播 FM87.6</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm876/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm1051/96K/tzwj_video.m3u8',this.innerHTML)">14. 北京戏曲曲艺 FM105.1</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm1051/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm1006/96K/tzwj_video.m3u8',this.innerHTML)">15. 北京新闻广播 FM100.6</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm1006/96K/tzwj_video.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://123.56.16.201:1935/live/fm974/96K/tzwj_video.m3u8',this.innerHTML)">16. 北京音乐广播 FM97.4</a>
+<a href="vlc://http://123.56.16.201:1935/live/fm974/96K/tzwj_video.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__2">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(2);">福建省 4</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://live.qztvxwgj.com/live/fm923.m3u8',this.innerHTML)">1. 泉州广播都市之声 FM92.3</a>
+<a href="vlc://http://live.qztvxwgj.com/live/fm923.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live.qztvxwgj.com/live/fm904.m3u8',this.innerHTML)">2. 泉州广播交通之声 FM90.4</a>
+<a href="vlc://http://live.qztvxwgj.com/live/fm904.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live.qztvxwgj.com/live/fm1059.m3u8',this.innerHTML)">3. 泉州广播剌桐之声 FM105.9</a>
+<a href="vlc://http://live.qztvxwgj.com/live/fm1059.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live.qztvxwgj.com/live/fm889.m3u8',this.innerHTML)">4. 泉州广播新闻频道 FM88.9</a>
+<a href="vlc://http://live.qztvxwgj.com/live/fm889.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__3">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(3);">广东省 5</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://ctt5.rgd.com.cn/hifi',this.innerHTML)">1. 广东 HIFI 频道</a>
+<a href="vlc://http://ctt5.rgd.com.cn/hifi">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ctt.rgd.com.cn/story?type=.mp3',this.innerHTML)">2. 广东故事频道</a>
+<a href="vlc://http://ctt.rgd.com.cn/story?type=.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ctt.rgd.com.cn/fm1057?type=.mp3',this.innerHTML)">3. 广东优悦广播(南粤) FM105.7</a>
+<a href="vlc://http://ctt.rgd.com.cn/fm1057?type=.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live1.0763f.com/gb2/sd/live.m3u8',this.innerHTML)">4. 清远电台 FM88.7</a>
+<a href="vlc://http://live1.0763f.com/gb2/sd/live.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live1.0763f.com/gb1/sd/live.m3u8',this.innerHTML)">5. 清远电台 FM97.8</a>
+<a href="vlc://http://live1.0763f.com/gb1/sd/live.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__4">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(4);">广西壮族自治区 3</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://liveplay.lztvnet.com/live/31750_78ae236168b411e992905cb9018cf0d4.m3u8',this.innerHTML)">1. 柳州交通广播 FM99.10</a>
+<a href="vlc://http://liveplay.lztvnet.com/live/31750_78ae236168b411e992905cb9018cf0d4.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://liveplay.lztvnet.com/live/31750_950949d568b411e992905cb9018cf0d4.m3u8',this.innerHTML)">2. 柳州乡村广播 FM105.9</a>
+<a href="vlc://http://liveplay.lztvnet.com/live/31750_950949d568b411e992905cb9018cf0d4.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://liveplay.lztvnet.com/live/31750_43a4f2dc68b411e992905cb9018cf0d4.m3u8',this.innerHTML)">3. 柳州综合广播 FM102.9</a>
+<a href="vlc://http://liveplay.lztvnet.com/live/31750_43a4f2dc68b411e992905cb9018cf0d4.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__5">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(5);">海南省 5</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://stream2.hnntv.cn/gjlydzs/playlist.m3u8',this.innerHTML)">1. 海南国际旅游之声 FM103.8</a>
+<a href="vlc://http://stream2.hnntv.cn/gjlydzs/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream2.hnntv.cn/jtgb/playlist.m3u8',this.innerHTML)">2. 海南交通广播 FM100</a>
+<a href="vlc://http://stream2.hnntv.cn/jtgb/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream2.hnntv.cn/msgb/playlist.m3u8',this.innerHTML)">3. 海南民生广播 FM101</a>
+<a href="vlc://http://stream2.hnntv.cn/msgb/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream2.hnntv.cn/xwgb/playlist.m3u8',this.innerHTML)">4. 海南新闻广播 FM88.6</a>
+<a href="vlc://http://stream2.hnntv.cn/xwgb/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://stream2.hnntv.cn/yygb/playlist.m3u8',this.innerHTML)">5. 海南音乐广播 FM94.5</a>
+<a href="vlc://http://stream2.hnntv.cn/yygb/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__6">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(6);">河北省 3</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://live.fm.hebrbtv.com:1935/live/jt/64K/tzwj_video.m3u8',this.innerHTML)">1. 河北交通广播 FM99.2</a>
+<a href="vlc://http://live.fm.hebrbtv.com:1935/live/jt/64K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live.fm.hebrbtv.com:1935/live/sjc/64K/tzwj_video.m3u8',this.innerHTML)">2. 河北文艺广播 FM90.7</a>
+<a href="vlc://http://live.fm.hebrbtv.com:1935/live/sjc/64K/tzwj_video.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live.fm.hebrbtv.com:1935/live/yy/64K/tzwj_video.m3u8',this.innerHTML)">3. 河北音乐广播 FM102.4</a>
+<a href="vlc://http://live.fm.hebrbtv.com:1935/live/yy/64K/tzwj_video.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__7">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(7);">河南省 7</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/gudian/playlist.m3u8',this.innerHTML)">1. 河南古典音乐天籁广播</a>
+<a href="vlc://http://stream.hndt.com/live/gudian/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/jiaotong/playlist.m3u8',this.innerHTML)">2. 河南交通广播 FM104.1</a>
+<a href="vlc://http://stream.hndt.com/live/jiaotong/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/sijiache/playlist.m3u8',this.innerHTML)">3. 河南私家车 999 FM99.9</a>
+<a href="vlc://http://stream.hndt.com/live/sijiache/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/yule/playlist.m3u8',this.innerHTML)">4. 河南戏曲娱乐广播</a>
+<a href="vlc://http://stream.hndt.com/live/yule/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/xinwen/playlist.m3u8',this.innerHTML)">5. 河南新闻广播 FM95.4</a>
+<a href="vlc://http://stream.hndt.com/live/xinwen/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/yinyue/playlist.m3u8',this.innerHTML)">6. 河南音乐广播 FM88.1</a>
+<a href="vlc://http://stream.hndt.com/live/yinyue/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://stream.hndt.com/live/yingshi/playlist.m3u8',this.innerHTML)">7. 河南影视广播 MyRadio FM90.0</a>
+<a href="vlc://http://stream.hndt.com/live/yingshi/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__8">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(8);">黑龙江省 7</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrd97/sd/live.m3u8',this.innerHTML)">1. 龙广爱家频道 FM97</a>
+<a href="vlc://http://stream3.hljtv.com/hljrd97/sd/live.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdgx/sd/live.m3u8',this.innerHTML)">2. 龙广北大荒之声 FM104.6</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdgx/sd/live.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdcy/sd/live.m3u8',this.innerHTML)">3. 龙广朝鲜语广播 AM873</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdcy/sd/live.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdjt/sd/live.m3u8',this.innerHTML)">4. 龙广交通广播 FM99.8</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdjt/sd/live.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdsh/sd/live.m3u8',this.innerHTML)">5. 龙广私家车广播 FM104.5</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdsh/sd/live.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdnc/sd/live.m3u8',this.innerHTML)">6. 龙广乡村广播 AM945</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdnc/sd/live.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://stream3.hljtv.com/hljrdnx/sd/live.m3u8',this.innerHTML)">7. 龙广音乐广播 FM95.8</a>
+<a href="vlc://http://stream3.hljtv.com/hljrdnx/sd/live.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__9">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(9);">湖北省 8</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbfnetgb_q1/index.m3u8',this.innerHTML)">1. 湖北妇女儿童广播 FM102.6</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbfnetgb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbjdyygb_q1/index.m3u8',this.innerHTML)">2. 湖北经典音乐广播</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbjdyygb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbjjgb_q1/index.m3u8',this.innerHTML)">3. 湖北经济广播 FM99.8</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbjjgb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbncgb_q1/index.m3u8',this.innerHTML)">4. 湖北农村广播 FM91.2</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbncgb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbshgb_q1/index.m3u8',this.innerHTML)">5. 湖北生活广播 FM96.6</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbshgb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbsjcgb_q1/index.m3u8',this.innerHTML)">6. 湖北私家车广播 FM107.8</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbsjcgb_q1/index.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbzs_q1/index.m3u8',this.innerHTML)">7. 湖北之声 FM104.6</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbzs_q1/index.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live7.hbtv.com.cn/masvod/hbzxgb_q1/index.m3u8',this.innerHTML)">8. 湖北资讯广播 AM1179</a>
+<a href="vlc://http://live7.hbtv.com.cn/masvod/hbzxgb_q1/index.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__10">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(10);">江苏省 8</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/8/playlist.m3u8',this.innerHTML)">1. 南京 MY FM103.5</a>
+<a href="vlc://http://hls.njgb.com/live_hls/8/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/7/playlist.m3u8',this.innerHTML)">2. 南京城市调频 FM101.7</a>
+<a href="vlc://http://hls.njgb.com/live_hls/7/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/2/playlist.m3u8',this.innerHTML)">3. 南京交通台 FM102.4</a>
+<a href="vlc://http://hls.njgb.com/live_hls/2/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/6/playlist.m3u8',this.innerHTML)">4. 南京私家车广播 FM98.1</a>
+<a href="vlc://http://hls.njgb.com/live_hls/6/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/3/playlist.m3u8',this.innerHTML)">5. 南京体育广播 FM104.3</a>
+<a href="vlc://http://hls.njgb.com/live_hls/3/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/1/playlist.m3u8',this.innerHTML)">6. 南京新闻台 FM106.9</a>
+<a href="vlc://http://hls.njgb.com/live_hls/1/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/5/playlist.m3u8',this.innerHTML)">7. 南京新闻综合广播 FM106.9</a>
+<a href="vlc://http://hls.njgb.com/live_hls/5/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://hls.njgb.com/live_hls/4/playlist.m3u8',this.innerHTML)">8. 南京音乐台 FM105.8</a>
+<a href="vlc://http://hls.njgb.com/live_hls/4/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__11">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(11);">辽宁省 4</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://lms.csytv.com/Live/120/live/livestream.m3u8',this.innerHTML)">1. 沈阳都市广播 FM92.1</a>
+<a href="vlc://http://lms.csytv.com/Live/120/live/livestream.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://lms.csytv.com/Live/119/live/livestream.m3u8',this.innerHTML)">2. 沈阳生活广播 FM103.4</a>
+<a href="vlc://http://lms.csytv.com/Live/119/live/livestream.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://lms.csytv.com/Live/118/live/livestream.m3u8',this.innerHTML)">3. 沈阳新闻广播 FM104.5</a>
+<a href="vlc://http://lms.csytv.com/Live/118/live/livestream.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://lms.csytv.com/Live/121/live/livestream.m3u8',this.innerHTML)">4. 沈阳音乐广播 路上好朋友 FM98.6</a>
+<a href="vlc://http://lms.csytv.com/Live/121/live/livestream.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__12">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(12);">山东省 6</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://ts2.ijntv.cn/jngspl/playlist.m3u8',this.innerHTML)">1. 济南故事广播 FM104.3</a>
+<a href="vlc://http://ts2.ijntv.cn/jngspl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ts1.ijntv.cn/jnjtpl/playlist.m3u8',this.innerHTML)">2. 济南交通广播 FM103.1</a>
+<a href="vlc://http://ts1.ijntv.cn/jnjtpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ts1.ijntv.cn/jnjjpl/playlist.m3u8',this.innerHTML)">3. 济南经济广播 FM90.9</a>
+<a href="vlc://http://ts1.ijntv.cn/jnjjpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ts2.ijntv.cn/jncatpl/playlist.m3u8',this.innerHTML)">4. 济南私家车广播 FM93.6</a>
+<a href="vlc://http://ts2.ijntv.cn/jncatpl/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ts1.ijntv.cn/jnxwpl/playlist.m3u8',this.innerHTML)">5. 济南新闻广播 FM106.6</a>
+<a href="vlc://http://ts1.ijntv.cn/jnxwpl/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://ts2.ijntv.cn/jnyypl/playlist.m3u8',this.innerHTML)">6. 济南音乐广播 FM88.7</a>
+<a href="vlc://http://ts2.ijntv.cn/jnyypl/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__13">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(13);">陕西省 9</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/city.mp3',this.innerHTML)">1. 陕西都市广播-陕广新闻 FM101.8</a>
+<a href="vlc://http://radio.sxtvs.com/radio/city.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/story.mp3',this.innerHTML)">2. 陕西故事广播 AM603</a>
+<a href="vlc://http://radio.sxtvs.com/radio/story.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/traffic.mp3',this.innerHTML)">3. 陕西交通广播 FM91.6</a>
+<a href="vlc://http://radio.sxtvs.com/radio/traffic.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/country.mp3',this.innerHTML)">4. 陕西农村广播 AM900</a>
+<a href="vlc://http://radio.sxtvs.com/radio/country.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/cityopera.mp3',this.innerHTML)">5. 陕西秦腔广播 FM101.1</a>
+<a href="vlc://http://radio.sxtvs.com/radio/cityopera.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/opera.mp3',this.innerHTML)">6. 陕西戏曲广播 AM747</a>
+<a href="vlc://http://radio.sxtvs.com/radio/opera.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/news.mp3',this.innerHTML)">7. 陕西新闻广播 FM106.6</a>
+<a href="vlc://http://radio.sxtvs.com/radio/news.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/music.mp3',this.innerHTML)">8. 陕西音乐广播 FM98.8</a>
+<a href="vlc://http://radio.sxtvs.com/radio/music.mp3">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://radio.sxtvs.com/radio/kids.mp3',this.innerHTML)">9. 西安 MY FM FM105.5</a>
+<a href="vlc://http://radio.sxtvs.com/radio/kids.mp3">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__14">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(14);">台湾 22</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://billboardradio.rastream.com/gfm-awesome80s',this.innerHTML)">1. Billboard Radio China 80/90 後</a>
+<a href="vlc://http://billboardradio.rastream.com/gfm-awesome80s">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://billboardradio.rastream.com/gfm-clubhkgfm',this.innerHTML)">2. Billboard Radio China 電子</a>
+<a href="vlc://http://billboardradio.rastream.com/gfm-clubhkgfm">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://billboardradio.rastream.com/gfm-asiahitz',this.innerHTML)">3. Billboard Radio China 亞洲金曲館</a>
+<a href="vlc://http://billboardradio.rastream.com/gfm-asiahitz">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://billboardradio.rastream.com/gfm-todaysmix',this.innerHTML)">4. Billboard Radio China 重磅 100</a>
+<a href="vlc://http://billboardradio.rastream.com/gfm-todaysmix">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://www.soundvideostar.com/live/_definst_/hakkaradio/playlist.m3u8',this.innerHTML)">5. RTI 講客電台 Live</a>
+<a href="vlc://https://www.soundvideostar.com/live/_definst_/hakkaradio/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://www.soundvideostar.com/live/_definst_/rti6/playlist.m3u8',this.innerHTML)">6. RTI 閩客粵語和歐美外語 Live</a>
+<a href="vlc://https://www.soundvideostar.com/live/_definst_/rti6/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://www.soundvideostar.com/live/_definst_/rti4/playlist.m3u8',this.innerHTML)">7. RTI 央廣音樂網 Live</a>
+<a href="vlc://https://www.soundvideostar.com/live/_definst_/rti4/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://www.soundvideostar.com/live/_definst_/rti3/playlist.m3u8',this.innerHTML)">8. RTI 中央廣播電臺</a>
+<a href="vlc://https://www.soundvideostar.com/live/_definst_/rti3/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://streamingv2.shoutcast.com/daai-radio_128.aac',this.innerHTML)">9. 大爱網路電台</a>
+<a href="vlc://https://streamingv2.shoutcast.com/daai-radio_128.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch03/playlist.m3u8',this.innerHTML)">10. 佳音经典音乐网</a>
+<a href="vlc://http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch03/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch02/playlist.m3u8',this.innerHTML)">11. 佳音罗东宜兰 FM90.3</a>
+<a href="vlc://http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch02/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch01/playlist.m3u8',this.innerHTML)">12. 佳音台北 FM90.9</a>
+<a href="vlc://http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch01/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch05/playlist.m3u8',this.innerHTML)">13. 佳音桃园 GoGo Radio</a>
+<a href="vlc://http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch05/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch04/playlist.m3u8',this.innerHTML)">14. 佳音现代音乐网</a>
+<a href="vlc://http://cdn51.ccdntech.com/live-http/_definst_/vod51_Live/ch04/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://flv.ccdntech.com/live/_definst_/mp4:vod256_Live/fm/playlist.m3u8',this.innerHTML)">15. 台北广播电台 FM93.1</a>
+<a href="vlc://http://flv.ccdntech.com/live/_definst_/mp4:vod256_Live/fm/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cast.news98.com.tw:8000/news98',this.innerHTML)">16. 台北九八新闻台</a>
+<a href="vlc://http://cast.news98.com.tw:8000/news98">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://cdn196.ccdntech.com/live-http/_definst_/vod196_Live/live/playlist.m3u8',this.innerHTML)">17. 台湾 IC 之音竹科广播</a>
+<a href="vlc://https://cdn196.ccdntech.com/live-http/_definst_/vod196_Live/live/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://streaming.radionomy.com/JamendoLounge',this.innerHTML)">18. 台湾 Lounge Radio 音乐电台</a>
+<a href="vlc://http://streaming.radionomy.com/JamendoLounge">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://am981.ddns.net:9005/stream.ogg',this.innerHTML)">19. 台湾凤鸣广播电台二台</a>
+<a href="vlc://https://am981.ddns.net:9005/stream.ogg">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://am1161.ddns.net:9005/stream.ogg',this.innerHTML)">20. 台湾凤鸣广播电台一台</a>
+<a href="vlc://https://am1161.ddns.net:9005/stream.ogg">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://140.136.115.115:8000/fjuvoice885.mp3',this.innerHTML)">21. 台湾辅大之声广播电台</a>
+<a href="vlc://http://140.136.115.115:8000/fjuvoice885.mp3">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://59.120.88.155:8000/live.mp3',this.innerHTML)">22. 台湾古典音乐台 Classical FM 97.7</a>
+<a href="vlc://http://59.120.88.155:8000/live.mp3">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_1" id="tree_id__15">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(15);">香港 17</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('https://www.rthk.hk/feeds/dtt/rthktv31_https.m3u8',this.innerHTML)">1. 香港电视 31 台</a>
+<a href="vlc://https://www.rthk.hk/feeds/dtt/rthktv31_https.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://www.rthk.hk/feeds/dtt/rthktv32_https.m3u8',this.innerHTML)">2. 香港电视 32 台</a>
+<a href="vlc://https://www.rthk.hk/feeds/dtt/rthktv32_https.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio2-lh.akamaihd.net/i/radio2_1@355865/master.m3u8',this.innerHTML)">3. 香港电台第二台</a>
+<a href="vlc://https://rthkaudio2-lh.akamaihd.net/i/radio2_1@355865/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio3-lh.akamaihd.net/i/radio3_1@355866/master.m3u8',this.innerHTML)">4. 香港电台第三台</a>
+<a href="vlc://https://rthkaudio3-lh.akamaihd.net/i/radio3_1@355866/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio4-lh.akamaihd.net/i/radio4_1@355867/master.m3u8',this.innerHTML)">5. 香港电台第四台</a>
+<a href="vlc://https://rthkaudio4-lh.akamaihd.net/i/radio4_1@355867/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio5-lh.akamaihd.net/i/radio5_1@355868/master.m3u8',this.innerHTML)">6. 香港电台第五台</a>
+<a href="vlc://https://rthkaudio5-lh.akamaihd.net/i/radio5_1@355868/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8',this.innerHTML)">7. 香港电台第一台</a>
+<a href="vlc://https://rthkaudio1-lh.akamaihd.net/i/radio1_1@355864/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://202.177.192.119/radiopth',this.innerHTML)">8. 香港电台普通话台</a>
+<a href="vlc://http://202.177.192.119/radiopth">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio6-lh.akamaihd.net/i/radiopth_1@355869/master.m3u8',this.innerHTML)">9. 香港电台普通话台</a>
+<a href="vlc://https://rthkaudio6-lh.akamaihd.net/i/radiopth_1@355869/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://rthkaudio6cnr-lh.akamaihd.net/i/radio6cnr_1@575604/master.m3u8',this.innerHTML)">10. 香港电台香港之声</a>
+<a href="vlc://https://rthkaudio6cnr-lh.akamaihd.net/i/radio6cnr_1@575604/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://ap.tunein.xyz/fantv/m3u8/archive/channel2.m3u8',this.innerHTML)">11. 香港开电视</a>
+<a href="vlc://https://ap.tunein.xyz/fantv/m3u8/archive/channel2.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/cr2-hd.3gp/chunks.m3u8',this.innerHTML)">12. 香港商业电台叱咤 903</a>
+<a href="vlc://https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/cr2-hd.3gp/chunks.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/am864.3gp/chunks.m3u8',this.innerHTML)">13. 香港商业电台豁达 864</a>
+<a href="vlc://https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/am864.3gp/chunks.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/cr1-hd.3gp/chunks.m3u8',this.innerHTML)">14. 香港商业电台雷霆 881</a>
+<a href="vlc://https://do5oq4kz0w1x.cloudfront.net/radio-HTTP/cr1-hd.3gp/chunks.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://metroradio-lh.akamaihd.net/i/1044_h@349800/master.m3u8',this.innerHTML)">15. 新城电台 Metro Plus AM1044</a>
+<a href="vlc://http://metroradio-lh.akamaihd.net/i/1044_h@349800/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://metroradio-lh.akamaihd.net/i/104_h@349798/index_48_a-p.m3u8',this.innerHTML)">16. 新城电台财经台 104</a>
+<a href="vlc://https://metroradio-lh.akamaihd.net/i/104_h@349798/index_48_a-p.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://metroradio-lh.akamaihd.net/i/997_h@349799/index_48_a-b.m3u8',this.innerHTML)">17. 新城电台知讯台 997</a>
+<a href="vlc://https://metroradio-lh.akamaihd.net/i/997_h@349799/index_48_a-b.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__16">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(16);">新疆维吾尔自治区 12</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/1028/32K/tzwj_video.m3u8',this.innerHTML)">1. 新疆故事广播 FM102.8</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/1028/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/hay/32K/tzwj_video.m3u8',this.innerHTML)">2. 新疆哈萨克语广播</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/hay/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/949/32K/tzwj_video.m3u8',this.innerHTML)">3. 新疆交通广播 FM94.9</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/949/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/ky/32K/tzwj_video.m3u8',this.innerHTML)">4. 新疆柯尔克孜语广播</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/ky/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/my/32K/tzwj_video.m3u8',this.innerHTML)">5. 新疆蒙古语广播</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/my/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/924/32K/tzwj_video.m3u8',this.innerHTML)">6. 新疆民生广播 FM92.4</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/924/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/929/32K/tzwj_video.m3u8',this.innerHTML)">7. 新疆私家车广播 FM92.9</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/929/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/wywy/32K/tzwj_video.m3u8',this.innerHTML)">8. 新疆维吾尔语交通文艺广播</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/wywy/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/wy/32K/tzwj_video.m3u8',this.innerHTML)">9. 新疆维吾尔语综合广播</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/wy/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/961/32K/tzwj_video.m3u8',this.innerHTML)">10. 新疆新闻广播 FM96.1</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/961/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/738/32K/tzwj_video.m3u8',this.innerHTML)">11. 新疆阳光 895 FM89.5</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/738/32K/tzwj_video.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://aod.xjbs.com.cn:1935/live/1039/32K/tzwj_video.m3u8',this.innerHTML)">12. 新疆音乐广播 MY FM FM103.9</a>
+<a href="vlc://http://aod.xjbs.com.cn:1935/live/1039/32K/tzwj_video.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__17">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(17);">云南省 9</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/fm99.stream/playlist.m3u8',this.innerHTML)">1. 云南 FM99</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/fm99.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/gjgb.stream/playlist.m3u8',this.innerHTML)">2. 云南国际广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/gjgb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/jtgb.stream/playlist.m3u8',this.innerHTML)">3. 云南交通广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/jtgb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/jygb.stream/playlist.m3u8',this.innerHTML)">4. 云南教育广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/jygb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/jjgb.stream/playlist.m3u8',this.innerHTML)">5. 云南经济广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/jjgb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/mzgb.stream/playlist.m3u8',this.innerHTML)">6. 云南民族广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/mzgb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/segb.stream/playlist.m3u8',this.innerHTML)">7. 云南少儿广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/segb.stream/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/xwgb.stream/playlist.m3u8',this.innerHTML)">8. 云南新闻广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/xwgb.stream/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://116.55.228.232:1935/edgeradio/yygb.stream/playlist.m3u8',this.innerHTML)">9. 云南音乐广播</a>
+<a href="vlc://http://116.55.228.232:1935/edgeradio/yygb.stream/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__18">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(18);">浙江省 8</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio06/128k.m3u8',this.innerHTML)">1. 浙江城市之声 FM107</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio06/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio04/128k.m3u8',this.innerHTML)">2. 浙江交通之声 FM93</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio04/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio05/128k.m3u8',this.innerHTML)">3. 浙江经济广播 FM95</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio05/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio03/128k.m3u8',this.innerHTML)">4. 浙江民生 FM99.6</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio03/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio07/128k.m3u8',this.innerHTML)">5. 浙江女主播电台 FM104.5</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio07/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio08/128k.m3u8',this.innerHTML)">6. 浙江新闻广播 FM98.8</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio08/128k.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio01/128k.m3u8',this.innerHTML)">7. 浙江音乐调频 FM96.8</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio01/128k.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://yf.m.l.cztv.com/channels/lantian/audio02/128k.m3u8',this.innerHTML)">8. 浙江之声 FM88</a>
+<a href="vlc://http://yf.m.l.cztv.com/channels/lantian/audio02/128k.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__19">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(19);">中央 26</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv1_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">1. CCTV-1 综合</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv1_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv10_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">2. CCTV-10 科教</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv10_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv11_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">3. CCTV-11 戏曲</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv11_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv12_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">4. CCTV-12 社会与法</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv12_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv13_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">5. CCTV-13 新闻</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv13_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctvchild_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">6. CCTV-14 少儿</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctvchild_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv15_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">7. CCTV-15 音乐</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv15_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv2_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">8. CCTV-2 财经</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv2_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv3_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">9. CCTV-3 综艺</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv3_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctvamerica_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">10. CCTV-4 中文国际 美洲</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctvamerica_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctveurope_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">11. CCTV-4 中文国际 欧洲</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctveurope_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv4_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">12. CCTV-4 中文国际 亚洲</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv4_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv6_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">13. CCTV-6 电影</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv6_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv7_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">14. CCTV-7 军事农业</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv7_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctv8_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">15. CCTV-8 电视剧</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctv8_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cctv.v.kcdnvip.com/live/cctvjilu_1/index.m3u8?adapt=0&BR=audio',this.innerHTML)">16. CCTV-9 纪录</a>
+<a href="vlc://http://cctv.v.kcdnvip.com/live/cctvjilu_1/index.m3u8?adapt=0&BR=audio">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://cri-lh.akamaihd.net/i/cri887_1@183455/master.m3u8',this.innerHTML)">17. CRI Hit FM FM88.7</a>
+<a href="vlc://http://cri-lh.akamaihd.net/i/cri887_1@183455/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/am846.m3u8',this.innerHTML)">18. CRI NEWS Plus AM846</a>
+<a href="vlc://http://sk.cri.cn/am846.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/905.m3u8',this.innerHTML)">19. CRI 环球资讯广播</a>
+<a href="vlc://http://sk.cri.cn/905.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/887.m3u8',this.innerHTML)">20. CRI 劲曲调频广播 FM88.7</a>
+<a href="vlc://http://sk.cri.cn/887.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/hakka.m3u8',this.innerHTML)">21. CRI 客家之声</a>
+<a href="vlc://http://sk.cri.cn/hakka.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/minnan.m3u8',this.innerHTML)">22. CRI 闽南之音</a>
+<a href="vlc://http://sk.cri.cn/minnan.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/nhzs.m3u8',this.innerHTML)">23. CRI 南海之声</a>
+<a href="vlc://http://sk.cri.cn/nhzs.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/915.m3u8',this.innerHTML)">24. CRI 轻松调频广播</a>
+<a href="vlc://http://sk.cri.cn/915.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/am1008.m3u8',this.innerHTML)">25. CRI 英语漫听广播</a>
+<a href="vlc://http://sk.cri.cn/am1008.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://sk.cri.cn/hyhq.m3u8',this.innerHTML)">26. CRI 中文環球</a>
+<a href="vlc://http://sk.cri.cn/hyhq.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__20">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(20);">澳大利亚 7</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://abcradiolivehls-lh.akamaihd.net/i/abcjazz_1@327288/master.m3u8',this.innerHTML)">1. ABC Jazz</a>
+<a href="vlc://http://abcradiolivehls-lh.akamaihd.net/i/abcjazz_1@327288/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://abcradiolivehls-lh.akamaihd.net/i/localcanberra_1@327263/master.m3u8',this.innerHTML)">2. ABC Radio Canberra</a>
+<a href="vlc://http://abcradiolivehls-lh.akamaihd.net/i/localcanberra_1@327263/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://streamer2.rightclickitservices.com:7220/;stream.mp3',this.innerHTML)">3. 澳大利亚中文广播电台 3CW 华语</a>
+<a href="vlc://http://streamer2.rightclickitservices.com:7220/;stream.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://streamer5.rightclickitservices.com:7210/stream',this.innerHTML)">4. 澳大利亚中文广播电台 AM1341 国语</a>
+<a href="vlc://http://streamer5.rightclickitservices.com:7210/stream">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://streamer5.rightclickitservices.com:7220/stream',this.innerHTML)">5. 澳大利亚中文广播电台 AM1620 粤语</a>
+<a href="vlc://http://streamer5.rightclickitservices.com:7220/stream">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://95.154.254.81:23185/;',this.innerHTML)">6. 澳洲 2ac 普通话频道</a>
+<a href="vlc://http://95.154.254.81:23185/;">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://streamer2.rightclickitservices.com:7200/;stream.mp3',this.innerHTML)">7. 西澳华语广播电台</a>
+<a href="vlc://http://streamer2.rightclickitservices.com:7200/;stream.mp3">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__21">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(21);">俄罗斯 1</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://icecast-ruvr.cdnvideo.ru/rian.voicechi',this.innerHTML)">1. 俄罗斯之声中文</a>
+<a href="vlc://http://icecast-ruvr.cdnvideo.ru/rian.voicechi">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__22">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(22);">法国 2</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://live02.rfi.fr/rfichinois-96k.mp3',this.innerHTML)">1. 法国国际广播电台中文</a>
+<a href="vlc://http://live02.rfi.fr/rfichinois-96k.mp3">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://live02.rfi.fr/rfienchinois-64.mp3',this.innerHTML)">2. 法国国际广播电台中文</a>
+<a href="vlc://http://live02.rfi.fr/rfienchinois-64.mp3">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__23">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(23);">加拿大 7</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://liveradio.cbc.ca/i/CBCR1_OTT@348188/master.m3u8',this.innerHTML)">1. CBC Radio 1</a>
+<a href="vlc://http://liveradio.cbc.ca/i/CBCR1_OTT@348188/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://liveradiocanada.cbc.ca/i/CBCR2_TOR@382863/master.m3u8',this.innerHTML)">2. CBC Radio 2</a>
+<a href="vlc://http://liveradiocanada.cbc.ca/i/CBCR2_TOR@382863/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://s2.voscast.com:9530/;',this.innerHTML)">3. 加拿大 A1 中文电台粤语</a>
+<a href="vlc://http://s2.voscast.com:9530/;">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://wowzaprodhd84-lh.akamaihd.net/i/4a22ee1f_1@8130/master.m3u8',this.innerHTML)">4. 加拿大国家广播电台(普通话)</a>
+<a href="vlc://https://wowzaprodhd84-lh.akamaihd.net/i/4a22ee1f_1@8130/master.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://ice5.securenetsystems.net/CHMB',this.innerHTML)">5. 加拿大华侨之声广播电台</a>
+<a href="vlc://https://ice5.securenetsystems.net/CHMB">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://5b2959fe11444.streamlock.net/radio/am1470.stream/playlist.m3u8',this.innerHTML)">6. 加拿大中文电台 AM1470</a>
+<a href="vlc://https://5b2959fe11444.streamlock.net/radio/am1470.stream/playlist.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8',this.innerHTML)">7. 加拿大中文电台 FM96.1</a>
+<a href="vlc://https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__24">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(24);">马来西亚 3</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://starrfm.rastream.com/starrfm-988',this.innerHTML)">1. 马来西亚 988 电台华语</a>
+<a href="vlc://http://starrfm.rastream.com/starrfm-988">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://astro3.rastream.com/melody',this.innerHTML)">2. 马来西亚 Melody 音乐台</a>
+<a href="vlc://https://astro3.rastream.com/melody">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://astro1.rastream.com/myfm',this.innerHTML)">3. 马来西亚 MY FM 音乐台</a>
+<a href="vlc://http://astro1.rastream.com/myfm">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__25">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(25);">美国 28</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://us-east.edge-1.cis.abacast.net/direct/espn-networkmp3-48',this.innerHTML)">1. ESPN Radio</a>
+<a href="vlc://http://us-east.edge-1.cis.abacast.net/direct/espn-networkmp3-48">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://audio.wgbh.org:8204/classical-hi',this.innerHTML)">2. 波士顿古典广播 WCRB-FM 99.5</a>
+<a href="vlc://https://audio.wgbh.org:8204/classical-hi">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://streams.audio.wgbh.org:8200/wgbh-aac',this.innerHTML)">3. 波士顿美国广播电台 WGBH-FM 89.7</a>
+<a href="vlc://https://streams.audio.wgbh.org:8200/wgbh-aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ice41.securenetsystems.net/KNCT',this.innerHTML)">4. 德州 KNCT-FM 91.3(Easy Listening)</a>
+<a href="vlc://http://ice41.securenetsystems.net/KNCT">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.weta.org:8000/stream',this.innerHTML)">5. 哥伦比亚特区 WAMU-FM 88.5(Classical)</a>
+<a href="vlc://http://stream.weta.org:8000/stream">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://18423.live.streamtheworld.com/KIXIAM.mp3',this.innerHTML)">6. 华盛顿 KIXI-AM 880(怀旧Nostalgia)</a>
+<a href="vlc://https://18423.live.streamtheworld.com/KIXIAM.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://1.ice1.sslstream.com/kkjz_fm.aac',this.innerHTML)">7. 加州 KKJZ-FM 88.1(Jazz)</a>
+<a href="vlc://https://1.ice1.sslstream.com/kkjz_fm.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://14023.live.streamtheworld.com/KLOSFMAAC_SC',this.innerHTML)">8. 加州 KLOS-FM 95.5(Classic Rock)</a>
+<a href="vlc://https://14023.live.streamtheworld.com/KLOSFMAAC_SC">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://c8.prod.playlists.ihrhls.com/181/playlist.m3u8',this.innerHTML)">9. 加州 KRRL-FM 92.3(Hip Hop)</a>
+<a href="vlc://https://c8.prod.playlists.ihrhls.com/181/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://17853.live.streamtheworld.com/KSURAMAAC.aac',this.innerHTML)">10. 加州 KSUR-AM 1260(L.A. Oldies)</a>
+<a href="vlc://http://17853.live.streamtheworld.com/KSURAMAAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://50.7.71.27:9731/;?icy=http',this.innerHTML)">11. 加州星岛中文电台 AM1400(粤语)</a>
+<a href="vlc://http://50.7.71.27:9731/;?icy=http">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://50.7.71.27:9725/;?icy=http',this.innerHTML)">12. 加州星岛中文电台 FM96.1 (国语)</a>
+<a href="vlc://http://50.7.71.27:9725/;?icy=http">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://mobilewzrc.serverroom.us:6914/;stream.nsv',this.innerHTML)">13. 美国 KAZN 中文广播</a>
+<a href="vlc://http://mobilewzrc.serverroom.us:6914/;stream.nsv">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://mobilekmrb.serverroom.us:6916/;stream.nsv',this.innerHTML)">14. 美国加州帕萨迪纳 KMRB 1430 AM 华语</a>
+<a href="vlc://http://mobilekmrb.serverroom.us:6916/;stream.nsv">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radiokest.serverroom.us:6670/;stream.mp3',this.innerHTML)">15. 美国中文电台</a>
+<a href="vlc://http://radiokest.serverroom.us:6670/;stream.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://ice24.securenetsystems.net/WABH',this.innerHTML)">16. 纽约 WABH-AM 1380 Country</a>
+<a href="vlc://https://ice24.securenetsystems.net/WABH">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://20843.live.streamtheworld.com/WCBSFMAAC_SC',this.innerHTML)">17. 纽约 WCBS-FM 101.1 Classic Hits</a>
+<a href="vlc://http://20843.live.streamtheworld.com/WCBSFMAAC_SC">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://mobilewkdm.serverroom.us:6912/;14481715552093544stream.nsv',this.innerHTML)">18. 纽约 WKDM 华语广播国语台</a>
+<a href="vlc://http://mobilewkdm.serverroom.us:6912/;14481715552093544stream.nsv">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://18053.live.streamtheworld.com/WNYLFMAAC_SC',this.innerHTML)">19. 纽约 WNYL-FM 92.3 另类摇滚 Alternative</a>
+<a href="vlc://http://18053.live.streamtheworld.com/WNYLFMAAC_SC">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://tjc.wnyc.org/js-stream-web',this.innerHTML)">20. 纽约公共电台 American Standards</a>
+<a href="vlc://https://tjc.wnyc.org/js-stream-web">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://fm939.wnyc.org/wnycfm-web',this.innerHTML)">21. 纽约公共电台 WNYC-FM 93.9</a>
+<a href="vlc://https://fm939.wnyc.org/wnycfm-web">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://opera-stream.wqxr.org/operavore-web',this.innerHTML)">22. 纽约古典音乐歌剧台</a>
+<a href="vlc://https://opera-stream.wqxr.org/operavore-web">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://q2stream.wqxr.org/q2-web',this.innerHTML)">23. 纽约古典音乐台 WQXR Q2</a>
+<a href="vlc://https://q2stream.wqxr.org/q2-web">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://stream.wqxr.org/wqxr-web',this.innerHTML)">24. 纽约古典音乐台 WQXR-FM 105.9</a>
+<a href="vlc://https://stream.wqxr.org/wqxr-web">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://mobilewzrc.serverroom.us:6910/;stream.mp3/playlist.m3u8',this.innerHTML)">25. 纽约华语广播 WZRC 粤语</a>
+<a href="vlc://http://mobilewzrc.serverroom.us:6910/;stream.mp3/playlist.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://stream2.bbnradio.org:8000/chinese',this.innerHTML)">26. 圣经广播网 BBN Chinese</a>
+<a href="vlc://http://stream2.bbnradio.org:8000/chinese">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://playerservices.streamtheworld.com/pls/KHCMFMAAC.pls',this.innerHTML)">27. 夏威夷 KHCM-FM 97.5 Country</a>
+<a href="vlc://https://playerservices.streamtheworld.com/pls/KHCMFMAAC.pls">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://rfahls-i.akamaihd.net/hls/live/226232/RFALive_1/index.m3u8',this.innerHTML)">28. 自由亚洲 RFA 中文</a>
+<a href="vlc://https://rfahls-i.akamaihd.net/hls/live/226232/RFALive_1/index.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__26">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(26);">日本 2</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('https://nhkworld.webcdn.stream.ne.jp/www11/radiojapan/all/263948/live_s.m3u8',this.innerHTML)">1. NHK 中文广播 (630-650 1200-2300 间断广播)</a>
+<a href="vlc://https://nhkworld.webcdn.stream.ne.jp/www11/radiojapan/all/263948/live_s.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://bbnjapanese-lh.akamaihd.net/i/BibleBroadcasting_Japaneseios@87760/master.m3u8',this.innerHTML)">2. 圣经广播网 Bible Broadcasting Japanese</a>
+<a href="vlc://https://bbnjapanese-lh.akamaihd.net/i/BibleBroadcasting_Japaneseios@87760/master.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__27">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(27);">塞尔维亚 5</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://stream.playradio.rs:8001/play.aac',this.innerHTML)">1. PLAY</a>
+<a href="vlc://http://stream.playradio.rs:8001/play.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://ca3.rcast.net:8014/',this.innerHTML)">2. Radio AS FM</a>
+<a href="vlc://http://ca3.rcast.net:8014/">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://streaming.tdiradio.com:8000/tdiradio96',this.innerHTML)">3. TDI Radio</a>
+<a href="vlc://http://streaming.tdiradio.com:8000/tdiradio96">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://live192.topfm.rs:8000/',this.innerHTML)">4. Top FM Belgrade 106.8</a>
+<a href="vlc://http://live192.topfm.rs:8000/">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://digitalstream.topfm.rs:8015/',this.innerHTML)">5. TOP FM DJ TIME</a>
+<a href="vlc://http://digitalstream.topfm.rs:8015/">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__28">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(28);">塞浦路斯 1</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://cdn.istoikona.com/ccnradio/ccnradio/icecast.audio',this.innerHTML)">1. CCN 塞浦路斯中文电台</a>
+<a href="vlc://https://cdn.istoikona.com/ccnradio/ccnradio/icecast.audio">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__29">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(29);">新加坡 9</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('https://20683.live.streamtheworld.com/HAO_963AAC.aac',this.innerHTML)">1. 新加坡 96.3 好 FM 音乐台</a>
+<a href="vlc://https://20683.live.streamtheworld.com/HAO_963AAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://19183.live.streamtheworld.com/CAPITAL958FMAAC.aac',this.innerHTML)">2. 新加坡 Capital 958 城市频道</a>
+<a href="vlc://https://19183.live.streamtheworld.com/CAPITAL958FMAAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://19443.live.streamtheworld.com/CAPITAL958FMAAC.aac',this.innerHTML)">3. 新加坡 Capital 958 城市频道</a>
+<a href="vlc://https://19443.live.streamtheworld.com/CAPITAL958FMAAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://19443.live.streamtheworld.com/RIA897FMAAC.aac',this.innerHTML)">4. 新加坡 RIA 897 音乐台</a>
+<a href="vlc://https://19443.live.streamtheworld.com/RIA897FMAAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://20663.live.streamtheworld.com/UFM_1003AAC.aac',this.innerHTML)">5. 新加坡 UFM 100.3 FM 华语</a>
+<a href="vlc://http://20663.live.streamtheworld.com/UFM_1003AAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://19443.live.streamtheworld.com/YES933AAC.aac',this.innerHTML)">6. 新加坡 YES 933 音乐广播</a>
+<a href="vlc://https://19443.live.streamtheworld.com/YES933AAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://19043.live.streamtheworld.com/SYMPHONY924AAC.aac',this.innerHTML)">7. 新加坡古典音乐电台</a>
+<a href="vlc://https://19043.live.streamtheworld.com/SYMPHONY924AAC.aac">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('https://d3kw4vhbdpgtqk.cloudfront.net/hls/miaomipcweb/01.m3u8',this.innerHTML)">8. 新加坡妙米频道</a>
+<a href="vlc://https://d3kw4vhbdpgtqk.cloudfront.net/hls/miaomipcweb/01.m3u8">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('https://19043.live.streamtheworld.com/LOVE972FMAAC.aac',this.innerHTML)">9. 新加坡最爱 97.2 FM 音乐台</a>
+<a href="vlc://https://19043.live.streamtheworld.com/LOVE972FMAAC.aac">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__30">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(30);">英国 1</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/eieuk.pls',this.innerHTML)">1. BBC World Service</a>
+<a href="vlc://http://wsdownload.bbc.co.uk/worldservice/meta/live/shoutcast/mp3/eieuk.pls">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="tree_2" id="tree_id__31">
+<div class="tree_tit"><h3><a href="javascript:showmenu_tree(31);">其他 4</a> </h3></div>
+<div class="tree_txt">
+<ul>
+<li><a href="javascript:void(0);" onclick="abc('http://103.11.102.62:8000/talkonly.mp3',this.innerHTML)">1. 講台</a>
+<a href="vlc://http://103.11.102.62:8000/talkonly.mp3">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://fmcdn.jin10.com/AAC/voice.m3u8',this.innerHTML)">2. 金十电台</a>
+<a href="vlc://http://fmcdn.jin10.com/AAC/voice.m3u8">vlc</a>
+</li>
+<li><a href="javascript:void(0);" onclick="abc('http://radio.soundofhope.org:8880/SOH_32K',this.innerHTML)">3. 希望之声</a>
+<a href="vlc://http://radio.soundofhope.org:8880/SOH_32K">vlc</a>
+</li>
+<li class="Lst"><a href="javascript:void(0);" onclick="abc('http://4521.hlsplay.aodianyun.com/xyzs/stream.m3u8',this.innerHTML)">4. 心约之声公益广播</a>
+<a href="vlc://http://4521.hlsplay.aodianyun.com/xyzs/stream.m3u8">vlc</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="link">
+	<p><a href="http://dmt.gearhostpreview.com/index.php/radio/m3u/1">android vlc</a> 
+	<a href="http://dmt.gearhostpreview.com/index.php/radio/m3u">windows vlc</a></p>
+	<p><a href="http://dmt.gearhostpreview.com/index.php/radio">http://dmt.gearhostpreview.com/index.php/radio</a></p></div>
+
+</div>
+<script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.min.js"></script>
+<script>
+function abc(m3u8,name){ //'http://lzlive.vojs.cn/2wtSfrS/92/live.m3u8'
+
+	document.getElementById("tr1").innerHTML=name+'<br /><span>'+m3u8+'</span>';
+	document.getElementById("audio").innerHTML='';
+
+	var video = document.getElementById('audio');
+	if(Hls.isSupported()) {
+		var hls = new Hls();
+		hls.loadSource(m3u8);
+		hls.attachMedia(video);
+		hls.on(Hls.Events.MANIFEST_PARSED,function() {
+			video.play();
+		});
+	}
+	else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+		video.src = m3u8;
+		video.addEventListener('canplay',function() {
+			video.play();
+		});
+	}
+}
+</script>
+
+</body>
+</html>
