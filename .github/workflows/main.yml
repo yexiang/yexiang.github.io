@@ -1,0 +1,14 @@
+name: 'GitHub Actions Weather Bot'
+ 
+on:
+  push:
+  schedule:
+    - cron: '0 21 * * *'
+
+runs-on: ubuntu-latest
+steps:
+  - name: 'Checkout codes'
+    uses: actions/checkout@v1
+
+  - name: 'Get weather report'
+    run: curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
