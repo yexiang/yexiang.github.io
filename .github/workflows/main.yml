@@ -1,26 +1,9 @@
 name: 'GitHub Actions Weather Bot'
-
-workflow "Push it!" {
-  on = "push"
-  resolves = ["push"]
-}
-
-action "push" {
-  uses = "ludeeus/action-push@master"
-  env = {
-    ACTION_MAIL = "ye.123789456@gmail.com"
-    ACTION_NAME = "octocat"
-    ACTION_BRANCH = "master"
-    ACTION_MESSAGE = "Action commit"
-  }
-  secrets = ["GITHUB_TOKEN"]
-}
-
  
 on:
   push:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '10 * * * *'
 
 
 jobs:
@@ -34,6 +17,6 @@ jobs:
     - name: 'Get weather report'
       run: curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
 
-    - name: action-push
-      uses: ludeeus/action-push@0.0.1
+    - name: 'push html'
+      uses: git add . && git -m 'init' && git push
 
