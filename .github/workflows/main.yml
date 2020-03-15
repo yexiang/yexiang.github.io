@@ -18,5 +18,5 @@ jobs:
       run:  curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
 
     - name: 'push html'
-      run:  git config --global user.email "ye.123789456@gmail.com" && git config --global user.name "yexiang" && git add . && git commit -m ' update init' && git push origin master --force   
+      run:  git config --global user.email "ye.123789456@gmail.com" && git config --global user.name "yexiang" && git add . && git commit -m ' update init' && git push origin master:master --force   
 
