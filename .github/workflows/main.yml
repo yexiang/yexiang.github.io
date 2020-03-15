@@ -5,7 +5,8 @@ name: 'GitHub Actions Weather Bot'
 on:
   push:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 1 * * *'
+
 
 jobs:
   # This workflow contains a single job called "build"
@@ -17,3 +18,7 @@ jobs:
 
     - name: 'Get weather report'
       run: curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
+
+    - name: action-push
+      uses: ludeeus/action-push@0.0.1
+
