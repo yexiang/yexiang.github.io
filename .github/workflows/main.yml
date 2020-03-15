@@ -20,3 +20,8 @@ jobs:
     - name: 'push html'
       run:  curl -T guicheng.html ftp://unaux_23374971:znkvzshg6@ftp.unaux.com/htdocs/public/guicheng.html
  
+
+    - name: 'Checkout codes'
+      uses: actions/checkout@v1
+
+
