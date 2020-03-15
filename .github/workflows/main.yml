@@ -25,6 +25,6 @@ jobs:
       run:  curl "https://wttr.in/Guicheng?format=4&m" -o /tmp/yy/guicheng.html
 
     - name: 'push html'
-      run:  cd /tmp/yy && git add . && git commit -m "initial commit" && git push origin master   
+      run:  cd /tmp/yy && git config --global user.email "ye.123789456@gmail.com" && git config --global user.name "yexiang" && git add . && git commit -m "initial commit" && git push origin master   
 
 
