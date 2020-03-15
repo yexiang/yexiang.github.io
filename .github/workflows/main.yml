@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: 'Get weather report'
-      run:  pwd && curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
+      run:  pwd && curl "https://wttr.in/Guicheng?format=4&m" -o /home/runner/work/yexiang.github.io/yexiang.github.io/guicheng.html
 
     - name: 'push html'
       run:  git config --global user.email "ye.123789456@gmail.com" && git config --global user.name "yexiang" && git add . && git commit -m 'update init' && git push origin HEAD:master --force   
