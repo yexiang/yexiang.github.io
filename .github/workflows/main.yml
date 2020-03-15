@@ -15,8 +15,8 @@ jobs:
       uses: actions/checkout@v1
 
     - name: 'Get weather report'
-      run: curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
+      run:  curl "https://wttr.in/Guicheng?format=4&m" -o guicheng.html
 
     - name: 'push html'
-      uses: git add . && git -m 'init' && git push
+      run:  git add . && git -m 'init' && git push
 
