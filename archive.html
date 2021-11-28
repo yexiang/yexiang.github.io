@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>rthk audio program archive music hls online js replace</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background: #000;
+			color: #aaa;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.container {
+			flex: 1;
+			overflow: hidden;
+			width: 95%;
+		}
+
+		.title, .title1 {
+			line-height: 25px;
+			margin: .325em 1em;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		#url {
+			width: 90%;
+			font-size: 18px;
+			line-height: 22px;
+			word-break: break-all;
+		}
+
+		.row {
+			padding: 3.5px 0;
+			display: flex;
+		}
+
+		#player {
+			padding: 5px;
+			width: 100%;
+		}
+
+		audio {
+			background-color: rgb(253, 208, 208);
+			filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+			width: 100%;
+			height: 45px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<p class="title1"><input type="date" id="datePicker" value=""></p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/dimsum/m4a/20200605.m4a/index_0_a.m3u8">
+				音樂早點 關偉光</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/albertau/m4a/20200605.m4a/index_0_a.m3u8">
+				Albert Au 區瑞强 區瑞強</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/subtle_sensuality/m4a/20200605.m4a/index_0_a.m3u8">
+				恬淡情懷 劉倩怡、鄧慧詩、周美茵、潘芳芳、余劍明</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/musiclover/m4a/20200605.m4a/index_0_a.m3u8">
+				音樂情人 鄭子誠</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/madeinhk/m4a/20200605.m4a/index_0_a.m3u8">
+				Made in Hong Kong 李志剛 李志剛、超B、羅敏莊、阿桃</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio1/those_were_the_days/m4a/20200605.m4a/index_0_a.m3u8">
+				那些年 張偉基 張偉基</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio5/what_a_cozy_evening/m4a/20200605.m4a/index_0_a.m3u8">
+				優閒安多Fun 陳師正</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/pth/2017musiclight/m4a/20200605.m4a/index_0_a.m3u8">
+				音樂之光 關偉光</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio5/bigbrothersong/m4a/20200605.m4a/index_0_a.m3u8">
+				好歌安哥 周錦瑤</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/longvacation/m4a/20200605.m4a/index_0_a.m3u8">
+				悠長假期 陳海琪</p>
+		</div>
+		<div class="row">
+			<p class="title"
+				title="https://rthkaod3-vh.akamaihd.net/i/m4a/radio/archive/radio2/friendsunlimited/m4a/20200605.m4a/index_0_a.m3u8">
+				SUNDAY任我行 陳少寶</p>
+		</div>
+		<div class="row">
+			<p id="url" class="title1"></p>
+		</div>
+		<div class="row">
+			<div id="player">
+				<audio width="360" height="40" id="audio" controls></audio>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/hls.js/0.12.4/hls.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+	<script>		
+		document.getElementById('datePicker').valueAsDate = new Date();
+		function abc(m3u8) {
+			document.getElementById("url").innerHTML = m3u8; document.getElementById("audio").innerHTML = '';
+			var video = document.getElementById('audio');
+			if (Hls.isSupported()) {
+				var hls = new Hls();
+				hls.loadSource(m3u8);
+				hls.attachMedia(video);
+				hls.on(Hls.Events.MANIFEST_PARSED, function () {
+					video.play();
+				});
+			}
+			else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+				video.src = m3u8;
+				video.addEventListener('canplay', function () {
+					video.play();
+				});
+			}
+		}
+		$(document).ready(function () {
+			$(".title").click(function () {
+				var o = $(this).attr("title");
+				var a1 = $("#datePicker").val().replace(/-/g, '');
+				a1 = o.replace('20200605', a1);
+				abc(a1);
+			});
+		});
+	</script>
+</body>
+
+</html>
